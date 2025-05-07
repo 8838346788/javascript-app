@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>veera</title>
-        <script>
-            function fun(){
-                var a="veeramani";
-                var b="1234";
-                document.getElementById('aa').innerHTML=a;
-                document.getElementById('bb').innerHTML=b;
-                if(a==aa){
-                    if(b==bb)
-                        {
-                        alert("login success");
-                    }
-                    else{
-                        alert("password or username invalid");
-                    }}
-                    else{
-                    alert("invalid");
-                }
-                }
-              
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .login-box { width: 300px; margin: 100px auto; padding: 20px; border: 1px solid #ccc; }
+    input { display: block; margin: 10px 0; width: 100%; padding: 8px; }
+    button { width: 100%; padding: 8px; }
+  </style>
+</head>
+<body>
 
+<div class="login-box">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="login()">Login</button>
+  <p id="message"></p>
+</div>
 
-                
-            
-        </script>
-    </head>
-    <body>
-        <div class="a">
-            <input type="text" id="aa" name="aa" placeholder="enter your name">
-            <input type="password" id="bb" name="bb" placeholder="enter your password">
-            <input type="button" value="login" onclick="fun()">
-        </div>
-    </body>
+<script>
+
+  var a = "veeramani";
+  var b= "12345";
+
+  function login() {
+    var aa = document.getElementById("username").value;
+   var bb= document.getElementById("password").value;
+    var message = document.getElementById("message");
+
+    if (aa=== a && bb === b) {
+      message.style.color = "green";
+      message.textContent = "Login successful!";
+    } else {
+      message.style.color = "red";
+      message.textContent = "Invalid username or password.";
+    }
+  }
+</script>
+
+</body>
 </html>
